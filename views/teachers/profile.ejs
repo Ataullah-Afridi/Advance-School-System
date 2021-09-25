@@ -1,0 +1,231 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /, -->
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>teacher Login</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="/admin/css/normalize.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="/admin/css/main.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/admin/css/bootstrap.min.css">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="/admin/css/all.min.css">
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="/admin/fonts/flaticon.css">
+    <!-- Full Calender CSS -->
+    <link rel="stylesheet" href="/admin/css/fullcalendar.min.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="/admin/css/animate.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/admin/style.css">
+    <!-- Modernize js -->
+    <script src="/admin/js/modernizr-3.6.0.min.js"></script>
+</head>
+
+
+<style>
+
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+    
+    
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey; 
+      border-radius: 10px;
+    }
+     
+    
+    ::-webkit-scrollbar-thumb {
+      background: rgba(0, 81, 255, 0.247); 
+      border-radius: 10px;
+    }
+    
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #0054b36c; 
+    }
+    </style>
+
+
+<body>
+    <!-- Preloader Start Here -->
+    <div id="preloader"></div>
+    <!-- Preloader End Here -->
+
+
+
+    <div id="wrapper" class="wrapper bg-ash">
+
+        <%- include('../partials/teachers_header') %>
+        
+               <!-- Page Area Start Here -->
+                 <div class="dashboard-page-one">
+
+               <%- include('../partials/teachers_sidebar') %>
+
+
+       <!-- Sidebar Area End Here -->
+       <div class="dashboard-content-one">
+        <!-- Breadcubs Area Start Here -->
+        <div class="breadcrumbs-area">
+            <h3>Admin Dashboard</h3>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>Teacher Profle</li>
+            </ul>
+        </div>
+        <!-- Breadcubs Area End Here -->
+        <div class="row">
+            <!-- Student Info Area Start Here -->
+            <div class="col-4-xxxl col-12">
+                <div class="card dashboard-card-ten">
+                    <div class="card-body">
+                        <div class="heading-layout1">
+                            <div class="item-title">
+                                <h3>About Me</h3>
+                            </div>
+                           
+                        </div>
+                        <div class="student-info">
+                            <div class="media media-none--xs">
+                                <div class="item-img">
+                                    <img src="/<%= teacher.image %>" class="media-img-auto" alt="student">
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="item-title"><%= teacher.firstName %> <%= teacher.lastName %></h3>
+                                   
+                                </div>
+                            </div>
+                            <div class="table-responsive info-table">
+                                <table class="table text-nowrap">
+                                    <tbody>
+                                        <tr>
+                                            <td>Name:</td>
+                                            <td class="font-medium text-dark-medium"><%= teacher.firstName %>  <%= teacher.lastName %></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gender:</td>
+                                            <td class="font-medium text-dark-medium"><%= teacher.gender %></td>
+                                        </tr>
+                                       
+                                        <tr>
+                                            <td>Date Of Birth:</td>
+                                            <td class="font-medium text-dark-medium"><%= teacher.dateOfBirth %></td>
+                                        </tr>
+                                       
+                                       
+                                        <tr>
+                                            <td>E-Mail:</td>
+                                            <td class="font-medium text-dark-medium"><%= teacher.email %></td>
+                                        </tr>
+                                        <tr>
+                                            <td>subject:</td>
+                                            <td class="font-medium text-dark-medium">
+                                               <%= teacher.subject %>     
+                                             </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Class:</td>
+                                            <td class="font-medium text-dark-medium"><%= teacher.class %></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Section:</td>
+                                            <td class="font-medium text-dark-medium"><%= teacher.section %></td>
+                                        </tr>
+                                        <tr>
+                                            <td>ID Number</td>
+                                            <td class="font-medium text-dark-medium"><%= teacher.IdNumber %></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Adress:</td>
+                                            <td class="font-medium text-dark-medium"><%= teacher.address %></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Phone:</td>
+                                            <td class="font-medium text-dark-medium"><%= teacher.contactNumber %></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+                <!-- Breadcubs Area End Here -->
+                <!-- Dashboard summery Start Here -->
+
+
+
+             
+                <!-- Dashboard summery End Here -->
+                <!-- Dashboard Content Start Here -->
+                
+
+
+
+
+
+
+
+
+                   
+                </footer>
+                <!-- Footer Area End Here -->
+            </div>
+        </div>
+        <!-- Page Area End Here -->
+    </div>
+    <!-- jquery-->
+    <script src="/admin/js/jquery-3.3.1.min.js"></script>
+    <!-- Plugins js -->
+    <script src="/admin/js/plugins.js"></script>
+    <!-- Popper js -->
+    <script src="/admin/js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="/admin/js/bootstrap.min.js"></script>
+    <!-- Counterup Js -->
+    <script src="/admin/js/jquery.counterup.min.js"></script>
+    <!-- Moment Js -->
+    <script src="/admin/js/moment.min.js"></script>
+    <!-- Waypoints Js -->
+    <script src="/admin/js/jquery.waypoints.min.js"></script>
+    <!-- Scroll Up Js -->
+    <script src="/admin/js/jquery.scrollUp.min.js"></script>
+    <!-- Full Calender Js -->
+    <script src="/admin/js/fullcalendar.min.js"></script>
+    <!-- Chart Js -->
+    <script src="/admin/js/Chart.min.js"></script>
+    <!-- Custom Js -->
+    <script src="/admin/js/main.js"></script>
+
+</body>
+
+
+</html>

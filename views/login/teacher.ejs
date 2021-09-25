@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	  crossorigin="anonymous">
+  
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+	  crossorigin="anonymous">
+  
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+
+	<title>Advace School System</title>
+	<link rel="stylesheet" type="text/css" href="/login/css/login.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+   
+    
+	::-webkit-scrollbar {
+	  width: 12px;
+	}
+	
+	
+	::-webkit-scrollbar-track {
+	  box-shadow: inset 0 0 5px grey; 
+	  border-radius: 10px;
+	}
+	 
+	
+	::-webkit-scrollbar-thumb {
+	  background: rgba(0, 81, 255, 0.247); 
+	  border-radius: 10px;
+	}
+	
+	
+	::-webkit-scrollbar-thumb:hover {
+	  background: #0054b36c; 
+	}
+	</style>
+<body>	
+
+	<h1 class="logoheader"style="text-align:center ; text-shadow: 2px 2px 5px blue;" ><b>Advance School System</b></h1>
+
+	<div class="container">
+		<div  class="img">
+			<img  src="/login/img/frontPageimg.png">
+		</div>
+		<div class="login-content">
+			<form action="/teacher/loginTeacher" method="post">
+				<img  src="/login/img/loginlogo.png">
+
+				<h2 class="title" style="text-transform: capitalize;">Sign in</h2>
+
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+
+           		   <div class="div">
+           		   		<h5>Username</h5>
+           		   		<input type="text" class="input" name="email">
+           		   </div>
+
+           		</div>
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<h5>Password</h5>
+           		    	<input type="password" class="input" id="myInput" name="password">
+						   <span><i class="fas fa-eye" aria-hidden="true" id="eye" onclick="toggle()"></i></span>
+            	   </div>
+
+            	</div>
+				
+            	<input type="submit" class="btn" value="Login">
+
+
+            	<a href="/teacher/forgot-password">Forgot Password?</a>
+				
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/login.js"></script>
+<script>
+	function toggle() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+	
+	</script>
+</body>
+</html>

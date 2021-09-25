@@ -1,0 +1,165 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>ASS | Home 1</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="/admin/css/normalize.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/admin/css/main.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/admin/css/bootstrap.min.css">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="/admin/css/all.min.css">
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="/admin/fonts/flaticon.css">
+    <!-- Full Calender CSS -->
+    <link rel="stylesheet" href="/admin/css/fullcalendar.min.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="/admin/css/animate.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/admin/style.css">
+    <!-- Modernize js -->
+    <script src="/admin/js/modernizr-3.6.0.min.js"></script>
+</head>
+
+
+<style>
+
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+    
+    
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey; 
+      border-radius: 10px;
+    }
+     
+    
+    ::-webkit-scrollbar-thumb {
+      background: rgba(0, 81, 255, 0.247); 
+      border-radius: 10px;
+    }
+    
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #0054b36c; 
+    }
+    </style>
+
+
+<body>
+    <!-- Preloader Start Here -->
+    <div id="preloader"></div>
+    <!-- Preloader End Here -->
+
+
+
+    <div id="wrapper" class="wrapper bg-ash">
+
+       <!-- Header Menu Area Start Here -->
+     <%- include('../partials/students_header') %>
+        <!-- Header Menu Area End Here -->
+
+
+        
+        <!-- Page Area Start Here -->
+        <div class="dashboard-page-one">
+
+            <!-- Sidebar Area Start Here -->
+           <%- include('../partials/students_sidebar') %>
+            <!-- Sidebar Area End Here -->
+
+
+
+
+
+            <div class="dashboard-content-one">
+                <!-- Breadcubs Area Start Here -->
+                <div class="breadcrumbs-area">
+                    <h3>Admin Dashboard</h3>
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>Online Application Approval</li>
+                    </ul>
+                </div>
+                <!-- Breadcubs Area End Here -->
+                <!-- Dashboard summery Start Here -->
+
+              <h3>Application For Approval:</h3>
+                  <% onlineApp.forEach(function(online){ %>
+                    <a href="/<%= online.image %>">
+                <div class="row gutters-20">
+                    <div class="col-xl-6 col-sm-8 col-12">
+                        <div class="dashboard-summery-one mg-b-20">
+                            <div class="row align-items-center">
+
+                                <div class="col-19">
+                                    <div class="item-icon bg-light-green ">
+                                        <i class="flaticon-checklist"></i>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="item-content">
+                                        <div class="item-title"><%= online.title %></div>
+                                        <div class="item-number"><h4>3</h4></div>
+                                        <p><%= online.bio %></p>
+                                    <br><br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+       
+                </div>
+            </a>
+                  <% }); %>
+                <!-- Dashboard Content Start Here -->
+                   
+                </footer>
+                <!-- Footer Area End Here -->
+            </div>
+        </div>
+        <!-- Page Area End Here -->
+    </div>
+    <!-- jquery-->
+    <script src="/admin/js/jquery-3.3.1.min.js"></script>
+    <!-- Plugins js -->
+    <script src="/admin/js/plugins.js"></script>
+    <!-- Popper js -->
+    <script src="/admin/js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="/admin/js/bootstrap.min.js"></script>
+    <!-- Counterup Js -->
+    <script src="/admin/js/jquery.counterup.min.js"></script>
+    <!-- Moment Js -->
+    <script src="/admin/js/moment.min.js"></script>
+    <!-- Waypoints Js -->
+    <script src="/admin/js/jquery.waypoints.min.js"></script>
+    <!-- Scroll Up Js -->
+    <script src="/admin/js/jquery.scrollUp.min.js"></script>
+    <!-- Full Calender Js -->
+    <script src="/admin/js/fullcalendar.min.js"></script>
+    <!-- Chart Js -->
+    <script src="/admin/js/Chart.min.js"></script>
+    <!-- Custom Js -->
+    <script src="/admin/js/main.js"></script>
+
+</body>
+
+
+</html>

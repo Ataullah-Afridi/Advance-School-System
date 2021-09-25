@@ -1,0 +1,164 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /, -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>ASS | Student Attendence</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="/admin/css/normalize.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/admin/css/main.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/admin/css/bootstrap.min.css">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="/admin/css/all.min.css">
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="/admin/fonts/flaticon.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="/admin/css/animate.min.css">
+    <!-- Select 2 CSS -->
+    <link rel="stylesheet" href="/admin/css/select2.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/admin/style.css">
+    <!-- Modernize js -->
+    <script src="/admin/js/modernizr-3.6.0.min.js"></script>
+</head>
+<style>
+   
+    
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+    
+    
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey; 
+      border-radius: 10px;
+    }
+     
+    
+    ::-webkit-scrollbar-thumb {
+      background: rgba(0, 81, 255, 0.247); 
+      border-radius: 10px;
+    }
+    
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #0054b36c; 
+    }
+    </style>
+
+<body>
+    <!-- Preloader Start Here -->
+    <div id="preloader"></div>
+    <!-- Preloader End Here -->
+    <div id="wrapper" class="wrapper bg-ash">
+         <!-- Header Menu Area Start Here -->
+       <%- include('../partials/teachers_header') %>
+        <!-- Header Menu Area End Here -->
+        <!-- Page Area Start Here -->
+        <div class="dashboard-page-one">
+            <!-- Sidebar Area Start Here -->
+           <%- include('../partials/teachers_sidebar') %>
+            <!-- Sidebar Area End Here -->
+            <div class="dashboard-content-one">
+                <!-- Breadcubs Area Start Here -->
+                <div class="breadcrumbs-area">
+                    <h3>Add student Results</h3>
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>All Results</li>
+                    </ul>
+                </div>
+                <!-- Breadcubs Area End Here -->
+                <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="heading-layout1">
+                                    <div class="item-title">
+                                        <h3>Result Sheet Of Student, 
+                                            <script>
+                                        const month = ["January","February","March","April","May","June","July","August","Sep"];
+                                              const d = new Date();
+                                               document.write(month[d.getMonth()]);
+                                        </script> 2021</h3>
+                                    </div>
+                                   <div class="dropdown">
+                                        <a class="dropdown-toggle" href="#" role="button" 
+                                        data-toggle="dropdown" aria-expanded="false">...</a>
+                
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                    
+                                            <a class="dropdown-item" href="/teacher/get/add/result"><i class="fas fa-redo-alt text-orange-peel"></i>Refresh</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table bs-table table-striped table-bordered text-nowrap">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-left">Students</th>
+                                                <th class="text-left">Subject</th>
+                                                <th class="text-left">Roll Number</th>
+                                                <th class="text-left">Exam</th>
+                                                <th class="text-left">Obtained Marks</th>
+                                                <th class="text-left">Total Marks</th>
+                                                <th class="text-left">Grade</th>
+                                                <th class="text-left">Comment</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                           <% stdResult.forEach(function(kidAtt){ %>
+                                              <tr>
+                                                <td class="text-left">
+                                                <%= kidAtt.stdName %>
+                                                </td>
+                                                <td class="text-left"><%= kidAtt.subject %></td>
+                                                <td class="text-left"><%= kidAtt.rollNumber %></td>
+                                                <td class="text-left"><%= kidAtt.ExamName %></td>
+                                                <td class="text-left"><%= kidAtt.obtMarks %></td>
+                                                <td class="text-left"><%= kidAtt.totalMarks %></td>
+                                                <td class="text-left"><%= kidAtt.grade %></td>
+                                                <td class="text-left"><%= kidAtt.comment %></td>
+                                           </tr>
+                                       <% }); %>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!-- Student Attendence Area End Here -->
+               
+            </div>
+        </div>
+        <!-- Page Area End Here -->
+    </div>
+    <!-- jquery-->
+    <script src="/admin/js/jquery-3.3.1.min.js"></script>
+    <!-- Plugins js -->
+    <script src="/admin/js/plugins.js"></script>
+    <!-- Popper js -->
+    <script src="/admin/js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="/admin/js/bootstrap.min.js"></script>
+    <!-- Select 2 Js -->
+    <script src="/admin/js/select2.min.js"></script>
+    <!-- Scroll Up Js -->
+    <script src="/admin/js/jquery.scrollUp.min.js"></script>
+    <!-- Custom Js -->
+    <script src="/admin/js/main.js"></script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,215 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>ASS</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="#">
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="/admin/css/normalize.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/admin/css/main.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/admin/css/bootstrap.min.css">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="/admin/css/all.min.css">
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="/admin/fonts/flaticon.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="/admin/css/animate.min.css">
+    <!-- Data Table CSS -->
+    <link rel="stylesheet" href="/admin/css/jquery.dataTables.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/admin/style.css">
+    <!-- Modernize js -->
+    <script src="/admin/js/modernizr-3.6.0.min.js"></script>
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+</head>
+
+
+<style>
+   
+    
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+    
+    
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey; 
+      border-radius: 10px;
+    }
+     
+    
+    ::-webkit-scrollbar-thumb {
+      background: rgba(0, 81, 255, 0.247); 
+      border-radius: 10px;
+    }
+    
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #0054b36c; 
+    }
+    </style>
+
+
+<body>
+    <!-- Preloader Start Here -->
+    <div id="preloader"></div>
+    <!-- Preloader End Here -->
+
+
+
+    <div id="wrapper" class="wrapper bg-ash">
+
+       <!-- Header Menu Area Start Here -->
+        <%- include('../partials/admin_header') %>
+        <!-- Header Menu Area End Here -->
+
+
+        
+        <!-- Page Area Start Here -->
+        <div class="dashboard-page-one">
+
+            <!-- Sidebar Area Start Here -->
+           <%- include('../partials/admin_sidebar') %>
+            <!-- Sidebar Area End Here -->
+
+
+            <!-- Sidebar Area End Here -->
+            <div class="dashboard-content-one">
+                <!-- Breadcubs Area Start Here -->
+                <div class="breadcrumbs-area">
+                    <h3></h3>
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>All Assign Subject For Teacher</li>
+                    </ul>
+                </div>
+                <!-- Breadcubs Area End Here -->
+                <!-- Student Table Area Start Here -->
+                <div class="card height-auto">
+                    <div class="card-body">
+                        <div class="heading-layout1">
+                            <div class="item-title">
+                                <h3>All Teacher Assign Subject</h3>
+                            </div>
+                            <div class="dropdown">
+                                <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                                    aria-expanded="false">...</a>
+
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item" href="#"><i
+                                            class="fas fa-times text-orange-red"></i>Close</a>
+                                    <a class="dropdown-item" href="#"><i
+                                            class="fas fa-cogs text-dark-pastel-green"></i>Edit</a>
+                                    <a class="dropdown-item" href="#"><i
+                                            class="fas fa-redo-alt text-orange-peel"></i>Refresh</a>
+                                </div>
+                            </div>
+                        </div>
+                        <form class="mg-b-20">
+                            <div class="row gutters-8">
+                               <div class="col-4-xxxl col-xl-3 col-lg-3 col-12 form-group">
+                                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." class="form-control">
+                                </div>
+                            </div>
+                        </form>
+                        <div class="table-responsive">
+                            <table class="table display data-table text-nowrap">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input checkAll">
+                                                <label class="form-check-label">ID</label>
+                                            </div>
+                                        </th>
+                                        <th>Photo</th>
+                                        <th>Name</th>
+                                        <th>Assign Subject</th>
+                                        <th>Subject with Class</th>
+                                        <th>Section</th>
+                                     
+                                        <th>E-mail</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="myTable">
+                                      <% var sr = 1; assignSubject.forEach(function(ass){ %>
+                                    <tr>
+                                      
+                                        <td>
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">#<%= sr %></label>
+                                            </div>
+                                        </td>
+                                        <td class="text-center"><img src="/<%= ass.image %>" alt="student" style="width: 50px;"></td>
+                                        <td><%= ass.firstName %> <%= ass.lastName %></td>
+                                        <td><%= ass.subject %></td>
+                                        <td><%= ass.class %></td>
+                                        <td><%= ass.section %></td>
+                                        <td><%= ass.email %></td>
+                                        <td>
+                                           
+                                        </td>
+                                
+                                    </tr>
+                                       <% sr++; }); %>       
+                                    
+                                           class="fas fa-redo-alt text-orange-peel"></i>Refresh</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- Student Table Area End Here -->
+             
+            </div>
+        </div>
+        <!-- Page Area End Here -->
+    </div>
+    <!-- jquery-->
+    <script src="/admin/js/jquery-3.3.1.min.js"></script>
+    <!-- Plugins js -->
+    <script src="/admin/js/plugins.js"></script>
+    <!-- Popper js -->
+    <script src="/admin/js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="/admin/js/bootstrap.min.js"></script>
+    <!-- Scroll Up Js -->
+    <script src="/admin/js/jquery.scrollUp.min.js"></script>
+    <!-- Data Table Js -->
+    <script src="/admin/js/jquery.dataTables.min.js"></script>
+    <!-- Custom Js -->
+    <script src="/admin/js/main.js"></script>
+
+</body>
+
+
+</html>

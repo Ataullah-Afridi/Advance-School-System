@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #E4E8F0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+}
+.wrapper{
+    width: 650px;
+    max-width: 100%;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 0px auto 0;
+    position: relative;
+    background: #fff;
+    box-shadow: 2px 2px 10px #00000080;
+    border-top: 10px solid #1ab188;
+}
+.wrapper h2{
+    font-size: 24px;
+    line-height: 24px;
+    padding: 4px;
+    margin-bottom: 30px;
+    text-align: center;
+    border: 1px dotted #333;
+}
+.input-group{
+    margin-bottom: 12px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding: 20px 0;
+}
+.input-box{
+    width: 100%;
+    margin-right: 12px;
+    position: relative;
+}
+.input-box label{
+    position: absolute;
+    bottom: 43px;
+}
+.input-box:last-child{
+    margin-right: 0;
+}
+.name{
+    padding: 10px 10px 10px 40px;
+    width: 100%;
+    border: 1px solid #00000033;
+    outline: none;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    border-radius: 3px;
+    color: #333;
+    box-shadow: inset 0 1px 1px 0 #0000001a;
+}
+.name:focus{
+    -webkit-box-shadow:0 0 2px 1px #1ab18880;
+    -moz-box-shadow:0 0 2px 1px #1ab18880;
+    box-shadow:0 0 2px 1px #1ab18880;
+    border: 1px solid #1ab188;
+}
+.name:focus::-webkit-input-placeholder{
+    color: #333;
+}
+.input-group i{
+    height: 36px;
+    width: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    color: #13232fe6;
+    border-radius: 2px 0 0 2px;
+    transition: 0.3s;
+    font-size: 18px;
+    pointer-events: none;
+    border-right: 1px solid #cccccc;
+    border-bottom: none;
+}
+.name:focus + i{
+    color: #1ab188;
+    border-right: 1px solid #1ab188;
+}
+textarea{
+    height: 200px;
+}
+.comm i{
+    border: 1px solid #cccccc;
+}
+.comm label{
+    bottom: 133px;
+}
+button{
+    
+    background: #1ab188;
+    border: 1px solid rgba(0,0,0,0.2);
+    color: #fff;
+    outline: none;
+    padding: 0 10px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 1px 0 rgba(255,255,255,0.6);
+    letter-spacing: 1px;
+    transition: 0.5s;
+    width: 20%;
+    font-size: 18px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+button:hover, button:focus{
+    background-color: #179677;
+}
+
+.button2 {background-color: #008CBA;} /* Blue */
+.button3 {background-color: #f44336;} /* Red */ 
+.button4 {background-color: #e7e7e7; color: black;} /* Gray */ 
+.button5 {background-color: #555555;} /* Black */
+   
+ 

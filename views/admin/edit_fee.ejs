@@ -1,0 +1,289 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>ASS</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="#">
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="/admin/css/normalize.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/admin/css/main.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/admin/css/bootstrap.min.css">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="/admin/css/all.min.css">
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="/admin/fonts/flaticon.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="/admin/css/animate.min.css">
+    <!-- Select 2 CSS -->
+    <link rel="stylesheet" href="/admin/css/select2.min.css">
+    <!-- Date Picker CSS -->
+    <link rel="stylesheet" href="/admin/css/datepicker.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/admin/style.css">
+    <!-- Modernize js -->
+    <script src="/admin/js/modernizr-3.6.0.min.js"></script>
+</head>
+
+<style>
+   
+    
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+    
+    
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey; 
+      border-radius: 10px;
+    }
+     
+    
+    ::-webkit-scrollbar-thumb {
+      background: rgba(0, 81, 255, 0.247); 
+      border-radius: 10px;
+    }
+    
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #0054b36c; 
+    }
+    </style>
+
+
+<body>
+    <!-- Preloader Start Here -->
+    <div id="preloader"></div>
+    <!-- Preloader End Here -->
+
+    <div id="wrapper" class="wrapper bg-ash">
+
+       <%- include('../partials/admin_header') %>
+        
+        <!-- Page Area Start Here -->
+        <div class="dashboard-page-one">
+
+               <%- include('../partials/admin_sidebar') %>
+          
+              <!-- Sidebar Area End Here -->
+            <div class="dashboard-content-one">
+                <!-- Breadcubs Area Start Here -->
+                <div class="breadcrumbs-area">
+                    <h3>Fee</h3>
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>Edit Fee Form</li>
+                    </ul>
+                </div>
+                <!-- Breadcubs Area End Here -->
+                <!-- Admit Form Area Start Here -->
+                <div class="card height-auto">
+                    <div class="card-body">
+                        <div class="heading-layout1">
+                            <div class="item-title">
+                                <h3>Edit Fee</h3>
+                            </div>
+                            <div class="dropdown">
+                                <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                                    aria-expanded="false">...</a>
+
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item" href="#"><i
+                                            class="fas fa-times text-orange-red"></i>Close</a>
+                                    <a class="dropdown-item" href="#"><i
+                                            class="fas fa-cogs text-dark-pastel-green"></i>Edit</a>
+                                    <a class="dropdown-item" href="#"><i
+                                            class="fas fa-redo-alt text-orange-peel"></i>Refresh</a>
+                                </div>
+                            </div>
+                        </div>
+                        <form class="new-added-form" action="/admin/edit/fee/<%= editFee.id %>" method="post" enctype="multipart/form-data">
+                            <div class="row">
+                                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                    <label>Full Name *</label>
+                                    <input type="text" name="fullName" value="<%= editFee.fullName %>" placeholder="" class="form-control">
+                                </div>
+                                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                    <label>Gender *</label>
+                                    <select class="select2" name="gender">
+                                        <option value="<%= editFee.gender %>"><%= editFee.gender %></option>
+                                        <option>Please Select Gender *</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Others">Others</option>
+                                    </select>
+                                </div>
+                            
+                                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                    <label>Roll</label>
+                                    <input type="text" name="roll" value="<%= editFee.roll %>" placeholder="" class="form-control">
+                                </div>
+                            
+                                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                    <label>E-Mail</label>
+                                    <input type="email" value="<%= editFee.email %>" name="email" placeholder="" class="form-control">
+                                </div>
+                                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                    <label>Class *</label>
+                                    <select class="select2"  name="class">
+                                         <option value="<%= editFee.class %>"><%= editFee.class %></option>
+                                          <option value="">Please Select Class *</option>
+                                        <option value="Play">Play</option>
+                                        <option value="Nursery">Nursery</option>
+                                        <option value="One">One</option>
+                                        <option value="Two">Two</option>
+                                        <option value="Three">Three</option>
+                                        <option value="Four">Four</option>
+                                        <option value="Five">Five</option>
+                                        <option value="6th">6th</option>
+                                        <option value="7th">7th</option>
+                                        <option value="8th">8th</option>
+                                        <option value="9th">9th</option>
+                                        <option value="10th">10th</option>
+                                
+
+                                    </select>
+                                </div>
+                                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                    <label>Section *</label>
+                                    <select class="select2" name="section">
+                                        <option value="<%= editFee.section %>"><%= editFee.section %></option>
+                                        <option value="">Please Select Section *</option>
+                                        <option value="A">A</option>
+                                        <option value="B">B</option>
+                                        <option value="C">C</option>
+                                      
+                                        <
+                                    </select>
+                                </div>
+                                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                    <label>Expenses Type</label>
+                                    <input type="text" value="<%= editFee.expensesType %>" name="expensesType" placeholder="" class="form-control">
+                                </div>
+                                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                    <label>Phone</label>
+                                    <input type="text" value="<%= editFee.contactNumber %>" name="contactNumber" placeholder="" class="form-control">
+                                </div>
+                                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                    <label>Parents</label>
+                                    <input type="text" value="<%= editFee.parent %>" name="parent" placeholder="" class="form-control">
+                                </div>
+                                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                    <label>Amount</label>
+                                    <input type="text" value="<%= editFee.amount %>" name="amount" placeholder="" class="form-control">
+                                </div>
+                                 <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                    <label>ID Number</label>
+                                    <input type="text" value="<%= editFee.IdNumber %>" name="IdNumber" placeholder="" class="form-control">
+                                </div>
+                                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                    <label>Status</label>
+                                    <input type="text" value="<%= editFee.status %>" name="status" placeholder="" class="form-control">
+                                </div>
+                                 <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                    <label>Date</label>
+                                    <input type="date" value="<%= editFee.date %>" name="date" placeholder="" class="form-control">
+                                </div>
+                                
+                                    <div class="col-lg-6 col-12 form-group mg-t-30">
+                                       
+                                            <label class="text-dark-medium">Upload Student Photo (150px X 150px)</label>
+                                            <div class="custom-file">
+                                               <input
+                                            type="file"
+                                            name="image"
+                                            class="form-control"
+                                            id="img"
+                                          />
+                                          <input
+                                            type="hidden"
+                                            name="oldImage"
+                                            value="<%= editFee.image %>"
+                                          />
+                                          <img
+                                            src="/<%= editFee.image %>"
+                                            name="oldImage"
+                                            id="imgPreview"
+                                            alt=""
+                                            style="
+                                              background-color: gray;
+                                              width: 100px;
+                                              margin: 20px;
+                                            "
+                                          />
+
+                                            </div>
+                            
+                                  </div>
+                                <div class="col-12 form-group mg-t-8">
+                                    <button type="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark">Save</button>
+                                    <button type="reset" class="btn-fill-lg bg-blue-dark btn-hover-yellow">Reset</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Admit Form Area End Here -->
+                
+            </div>
+        </div>
+        <!-- Page Area End Here -->
+    </div>
+    <!-- jquery-->
+    <script src="/admin/js/jquery-3.3.1.min.js"></script>
+    <!-- Plugins js -->
+    <script src="/admin/js/plugins.js"></script>
+    <!-- Popper js -->
+    <script src="/admin/js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="/admin/js/bootstrap.min.js"></script>
+    <!-- Select 2 Js -->
+    <script src="/admin/js/select2.min.js"></script>
+    <!-- Date Picker Js -->
+    <script src="/admin/js/datepicker.min.js"></script>
+    <!-- Scroll Up Js -->
+    <script src="/admin/js/jquery.scrollUp.min.js"></script>
+    <!-- Custom Js -->
+    <script src="/admin/js/main.js"></script>
+
+
+
+    <script>
+      // -----------------------------------------------------
+      // Preview image
+      function readURL(input) {
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+
+          reader.onload = function (e) {
+            $("#imgPreview")
+              .attr("src", e.target.result)
+              .width(100)
+              .height(100);
+          };
+
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+
+      $("#img").change(function () {
+        readURL(this);
+      });
+    </script>
+
+
+</body>
+
+
+</html>
